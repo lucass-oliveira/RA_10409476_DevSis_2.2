@@ -1,4 +1,4 @@
-# RA_10409476_DevSis_2
+# RA_10409476_DevSis_2.2
 Lucas Bittencourt de Oliveira, TIA: 42219851 || RA: 10409476
 
 <h2><a href= "https://www.mackenzie.br">Universidade Presbiteriana Mackenzie</a></h2>
@@ -206,3 +206,86 @@ ID: Campo de entrada para o ID.
   
 Gerar Relatório: Um botão/link para selecionar um funcionário específico.
 Gerar Relatório Completo: Um botão/link para gerar um relatório que abranja todos os funcionários. 
+
+# Sistema de Gerenciamento de Funcionários
+
+Este projeto consiste em um sistema de gerenciamento de funcionários com funcionalidades destinadas a gerentes, funcionários e um sistema automatizado de geração de relatórios.
+
+## 📌 Objetivo
+
+Desenvolver um sistema que permita:
+
+- Gerenciar o cadastro de funcionários
+- Consultar informações pessoais
+- Gerar relatórios automáticos sobre os funcionários
+
+## 👥 Atores e Casos de Uso
+
+| **Ator**               | **Caso de Uso**                        |
+|------------------------|----------------------------------------|
+| Gerente                | Fazer login                            |
+| Gerente                | Cadastrar funcionário                  |
+| Gerente                | Editar informações do funcionário      |
+| Gerente                | Excluir funcionário                    |
+| Gerente                | Gerar relatório de funcionários        |
+| Funcionário            | Visualizar informações pessoais        |
+| Sistema de Relatórios  | Emitir relatório automaticamente       |
+
+### 🧾 Descrição dos Casos de Uso
+
+- **Fazer login**: O gerente acessa o sistema mediante autenticação.
+- **Cadastrar funcionário**: O gerente adiciona um novo funcionário ao sistema.
+- **Editar informações do funcionário**: O gerente atualiza os dados de um funcionário existente.
+- **Excluir funcionário**: O gerente remove um funcionário do sistema.
+- **Gerar relatório de funcionários**: O gerente solicita a geração de um relatório detalhado.
+- **Visualizar informações pessoais**: Funcionários podem visualizar suas próprias informações.
+- **Emitir relatório automaticamente**: O sistema gera um relatório baseado nos critérios definidos.
+
+## 🔧 Caso de Uso Crítico: Cadastro e Operações
+
+Este caso de uso permite ao gerente realizar operações de:
+
+- Cadastro de novos funcionários
+- Edição de dados existentes
+- Exclusão de registros
+
+### **Atores Envolvidos**
+
+- **Usuário**: Gerente que solicita alterações
+- **Sistema**: Realiza validações e atualizações
+
+### **Fluxo Principal**
+
+1. O usuário acessa a opção de editar dados.
+2. O sistema solicita critérios de busca.
+3. O usuário visualiza os dados e seleciona o campo a ser editado.
+4. O sistema permite a edição dos campos.
+5. O usuário modifica os dados.
+6. O sistema valida os novos dados.
+7. Se válidos, o sistema atualiza o banco de dados.
+8. O sistema confirma a atualização.
+
+### **Fluxos Alternativos**
+
+- **Falha na Validação**: Exibe erro e solicita correção dos dados.
+- **Cancelamento da Edição**: O usuário pode cancelar a operação, mantendo os dados originais.
+
+### **Pré-condições**
+
+- O usuário deve estar autenticado.
+- Os dados a serem editados devem existir no banco de dados.
+
+## 🖼 Diagramas
+
+### 📌 Login
+![Login](Docs/Login.png)
+
+### 📌 Cadastro e Operações
+![Cadastro e Operações](Docs/Cadastro-Operacoes.png)
+
+### 📌 Geração de Relatórios
+![Geração de Relatórios](Docs/Geracao-Relatorios.png)
+
+---
+
+> 📁 As imagens estão localizadas na pasta `Docs/` na raiz do projeto.
