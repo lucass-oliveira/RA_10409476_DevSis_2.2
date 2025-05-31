@@ -293,10 +293,10 @@ O usuário pode optar por cancelar a edição a qualquer momento. O sistema inte
 ![Login](Docs/Login.png)
 
 #### Cadastro e Operações
-![Cadastro e Operações](Docs/Cadastro_Operacoes.png)
+![Cadastro e Operações](Docs/Cadastro_e_Operacoes.png)
 
 #### Geração de Relatórios
-![Geração de Relatórios](Docs/Geracao_Relatorios.png)
+![Geração de Relatórios](Docs/Geracao-Relatorio.png)
 
 # TG2 – Modelagem de Negócio e Prototipação
 
