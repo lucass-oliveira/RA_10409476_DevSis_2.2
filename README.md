@@ -10,11 +10,10 @@ Lucas Bittencourt de Oliveira, TIA: 42219851 || RA: 10409476
 - [Cenário de Negocio & Concepção](#cenário-de-negocio-&-concepção)
 - [Modelagem de negócio e prototipação](#modelagem-de-negócio-e-prototipação)
 - [Modelagem de negócio e prototipação](#Modelagem-de-negócio-e-prototipação)
-- [Modelo de Caso de Uso](#TG1–Cenário-de-Negócio,-Concepção-do-Sistema-e-Modelo-de-Casos-de-Uso)  
-- [Modelagem de Domínio do Projeto](#TG2–Modelagem-de-Negócio-e-Prototipação)  
-- [Prototipação](#TG3–Especificação-de-Requisitos)  
-- [Especificação de Requisitos](#tg3--especificação-de-requisitos)  
-- [Modelos de Interação com Padrões GRASP](#TG4–Modelos-de-Interação-com-Aplicação-de-Padrões-GRASP)
+- [TG1–Cenário de Negócio, Concepção do Sistema e Modelo de Casos de Uso](#TG1–Cenário-de-Negócio,-Concepção-do-Sistema-e-Modelo-de-Casos-de-Uso)  
+- [TG2–Modelagem de Negócio e Prototipação](#TG2–Modelagem-de-Negócio-e-Prototipação)  
+- [TG3–Especificação de Requisitos](#TG3–Especificação-de-Requisitos)
+- [TG4–Modelos de Interação com Aplicação de Padrões GRASP](#TG4–Modelos-de-Interação-com-Aplicação-de-Padrões-GRASP)
 
 
 # Autores
