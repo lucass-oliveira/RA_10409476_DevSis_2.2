@@ -1,19 +1,19 @@
 # RA_10409476_DevSis_2.2
 Lucas Bittencourt de Oliveira, TIA: 42219851 || RA: 10409476
 
-<h2><a href= "https://www.mackenzie.br">Universidade Presbiteriana Mackenzie</a></h2>
-<h3><a href= "https://www.mackenzie.br/graduacao/sao-paulo-higienopolis/sistemas-de-informacao">Sistemas de Informação</a></h3>
+<h2><a href="https://www.mackenzie.br">Universidade Presbiteriana Mackenzie</a></h2>
+<h3><a href="https://www.mackenzie.br/graduacao/sao-paulo-higienopolis/sistemas-de-informacao">Sistemas de Informação</a></h3>
 
-**Conteúdo**
+## Conteúdo
 
 - [Autores](#autores)
-- [Cenário de Negocio & Concepção](#cenário-de-negocio-&-concepção)
+- [Cenário de Negócio/Concepção](#cenário-de-negócioconcepção)
 - [Modelagem de negócio e prototipação](#modelagem-de-negócio-e-prototipação)
-- [Modelagem de negócio e prototipação](#Modelagem-de-negócio-e-prototipação)
-- [TG1–Cenário de Negócio, Concepção do Sistema e Modelo de Casos de Uso](#TG1–Cenário-de-Negócio,-Concepção-do-Sistema-e-Modelo-de-Casos-de-Uso)  
-- [TG2–Modelagem de Negócio e Prototipação](#TG2–Modelagem-de-Negócio-e-Prototipação)  
-- [TG3–Especificação de Requisitos](#TG3–Especificação-de-Requisitos)
-- [TG4–Modelos de Interação com Aplicação de Padrões GRASP](#TG4–Modelos-de-Interação-com-Aplicação-de-Padrões-GRASP)
+- [TG1 – Cenário de Negócio, Concepção do Sistema e Modelo de Casos de Uso](#tg1--cenário-de-negócio-concepção-do-sistema-e-modelo-de-casos-de-uso)
+- [TG2 – Modelagem de Negócio e Prototipação](#tg2--modelagem-de-negócio-e-prototipação)
+- [TG2 – Prototipação](#tg2--prototipação)
+- [TG3 – Especificação de Requisitos](#tg3--especificação-de-requisitos)
+- [TG4 – Modelos de Interação com Aplicação de Padrões GRASP](#tg4--modelos-de-interação-com-aplicação-de-padrões-grasp)
 
 
 # Autores
