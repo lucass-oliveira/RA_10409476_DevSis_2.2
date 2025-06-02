@@ -850,3 +850,87 @@ A aplicação dos padrões GRASP neste caso de uso resultou em:
 - Maior flexibilidade
 
 As classes possuem responsabilidades bem definidas, o sistema torna-se mais fácil de entender, manter e está preparado para futuras mudanças.
+
+# TG6 – Descrição da Arquitetura do Sistema
+
+## Diagrama de Pacotes
+
+![TG6](Docs/TG6.jpeg)
+
+## 1. Arquitetura Escolhida: Arquitetura em Camadas
+
+A arquitetura utilizada no sistema **StaffTrack** é baseada no padrão arquitetural em camadas, que visa separar responsabilidades em diferentes níveis de abstração, promovendo baixa acoplagem e alta coesão. Essa abordagem facilita a manutenção, testes e futuras evoluções do sistema.
+
+## 2. Justificativa da Arquitetura
+
+A escolha da arquitetura em camadas foi motivada pelos seguintes fatores:
+
+- O sistema possui funcionalidades bem segmentadas, como autenticação, gestão de usuários, geração de relatórios e integrações com APIs;  
+- A separação em camadas permite independência entre interface, lógica de negócio e persistência de dados;  
+- Favorece a organização do código, facilita testes unitários e garante maior flexibilidade na evolução da aplicação;  
+- É compatível com a stack tecnológica adotada (Java + Spring Boot + Thymeleaf + PostgreSQL).
+
+## 3. Descrição das Camadas
+
+Abaixo estão as camadas lógicas do sistema e os respectivos pacotes utilizados no projeto:
+
+### 1. Camada de Apresentação (View)
+
+Responsável pela interface com o usuário. Usa **HTML5**, **CSS3** e **Thymeleaf**. Exemplos de pacotes:
+
+- `view.login`: Tela de login  
+- `view.dashboard`: Tela principal  
+- `view.funcionarios`: Listagem e formulário de funcionários  
+- `view.relatorios`: Tela de geração de relatórios
+
+---
+
+### 2. Camada de Aplicação (Controller)
+
+Intermedia a comunicação entre a **View** e os **serviços**. Pacotes:
+
+- `controller.auth`: Lida com autenticação e login  
+- `controller.funcionario`: Gerencia CRUD de funcionários  
+- `controller.relatorios`: Coordena geração de relatórios  
+- `controller.notificacoes`: Gerencia notificações automáticas
+
+---
+
+### 3. Camada de Negócio (Service)
+
+Contém as **regras de negócio** e orquestra as operações do sistema. Pacotes:
+
+- `service.auth`: Validações de login e senha  
+- `service.funcionario`: Regras de cadastro, edição, exclusão e validações de documentos  
+- `service.relatorios`: Filtros e formatação de relatórios  
+- `service.notificacoes`: Envio de e-mails e alertas
+
+---
+
+### 4. Camada de Domínio (Domain)
+
+Contém as **entidades principais** do sistema, modeladas com classes orientadas a objetos:
+
+- `domain.usuario`: Representa gerente e funcionário  
+- `domain.funcionario`: Dados do colaborador  
+- `domain.contrato`: Contratos de trabalho e prazos
+
+---
+
+### 5. Camada de Persistência (Repository)
+
+Acesso ao **banco de dados**, com uso de **Spring Data JPA**:
+
+- `repository.usuario`  
+- `repository.funcionario`  
+- `repository.contrato`
+
+---
+
+### 6. Camada de Integração (Integration)
+
+Responsável pela comunicação com **serviços externos**:
+
+- `integration.viacep`: Consulta de endereços via API pública  
+- `integration.email`: Serviço de envio de notificações por e-mail
+
