@@ -851,6 +851,66 @@ A aplicação dos padrões GRASP neste caso de uso resultou em:
 
 As classes possuem responsabilidades bem definidas, o sistema torna-se mais fácil de entender, manter e está preparado para futuras mudanças.
 
+# TG5 – Modularização – Diagrama de Componentes
+
+## Diagrama de Componentes
+
+![TG5](Docs/TG5.png)
+
+O diagrama de componentes abaixo representa a arquitetura modular de alto nível do sistema **StaffTrack**. A modularização foi realizada com base nos requisitos funcionais e não funcionais definidos no **TG3**, considerando os princípios de reutilização, baixo acoplamento e separação de responsabilidades.
+
+## Descrição dos Componentes e Conexões
+
+**1. Autenticação**  
+- Provê a interface `ILoginService` para gerenciamento de login de usuários, controle de tentativas e bloqueio temporário.  
+- Requer a interface `IUserRepository` para acessar dados de usuários armazenados no banco de dados.
+
+**2. Validação de CPF**  
+- Provê a interface `ICpfValidator` para validar o CPF de funcionários, garantindo unicidade e formato correto.  
+- Utilizado pela **Gestão de Funcionários** para evitar registros inválidos ou duplicados.
+
+**3. Gestão de Funcionários**  
+- Provê a interface `IEmployeeManagement` com funcionalidades de cadastro, edição, exclusão lógica e consulta.  
+- Requer três interfaces:  
+  - `ICpfValidator`: para validação de CPF no momento do cadastro.  
+  - `ICepService`: para preenchimento automático de endereço via CEP.  
+  - `IEmployeeRepository`: para persistência de dados de funcionários.
+
+**4. Integração ViaCEP**  
+- Provê a interface `ICepService` usada para consulta de endereço baseado em CEP via API externa.
+
+**5. Persistência (Repositórios)**  
+- Provê três interfaces:  
+  - `IUserRepository`: para dados de usuários.  
+  - `IEmployeeRepository`: para dados de funcionários.  
+  - `IContractRepository`: para dados de contratos.  
+- É um componente base acessado por diversos módulos que realizam leitura e gravação em banco de dados.
+
+**6. Relatórios**  
+- Provê a interface `IReportGenerator` para geração de relatórios filtrados (por período, cargo, departamento).  
+- Requer:  
+  - `IEmployeeRepository` para obtenção de dados.  
+  - `ILogService` para registrar auditoria da geração dos relatórios.
+
+**7. Auditoria (Logs)**  
+- Provê a interface `ILogService`, usada por vários componentes para registrar quem fez alterações, quando e em quais dados.  
+- É fundamental para requisitos de segurança e rastreabilidade.
+
+**8. Notificações**  
+- Provê a interface `INotificationService` responsável por enviar alertas de contratos prestes a vencer.  
+- Requer a interface `IContractRepository` para verificar contratos em vencimento.
+
+## Justificativa da Conexão entre Componentes
+
+Cada conexão entre os componentes foi definida com base na dependência funcional necessária para execução das responsabilidades:
+
+- A **Autenticação** depende da **Persistência** de dados de usuário.  
+- A **Gestão de Funcionários** depende de **Validações** (CPF), **Integrações** (ViaCEP) e **Persistência**.  
+- A **Geração de Relatórios** precisa consultar dados e manter rastros no sistema de **Auditoria**.  
+- As **Notificações** analisam os dados de **Contrato** e notificam responsáveis automaticamente.  
+- A **Auditoria** é utilizada sempre que há modificações sensíveis ou geração de relatórios, garantindo integridade e transparência.
+
+
 # TG6 – Descrição da Arquitetura do Sistema
 
 ## Diagrama de Pacotes
